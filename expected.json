@@ -1,0 +1,162 @@
+{
+  "about": "Expected result of the Playlist Leanback page probe for each page. playUrl is relative to the site root; \"@page\" means the page itself. Fields that are absent are not checked.",
+  "pages": [
+    {
+      "path": "pages/article-plain.html",
+      "note": "Text and an image only.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/og-video-mp4.html",
+      "note": "Open Graph names a progressive file; relative URLs resolve against the page.",
+      "status": "VIDEO",
+      "evidence": "OG_VIDEO",
+      "kind": "MP4",
+      "playUrl": "media/clip.mp4",
+      "durationSeconds": 6,
+      "title": "Story with an og:video file"
+    },
+    {
+      "path": "pages/og-video-hls.html",
+      "note": "A bare .m3u8 plays natively in the host.",
+      "status": "VIDEO",
+      "evidence": "OG_VIDEO",
+      "kind": "WEB",
+      "playUrl": "media/hls/index.m3u8",
+      "title": "Story with an HLS og:video"
+    },
+    {
+      "path": "pages/og-type-video.html",
+      "note": "No player is visible in the markup; the page plays itself.",
+      "status": "VIDEO",
+      "evidence": "OG_TYPE_VIDEO",
+      "kind": "WEB",
+      "playUrl": "@page",
+      "title": "Page that is itself a video"
+    },
+    {
+      "path": "pages/twitter-player.html",
+      "note": "",
+      "status": "VIDEO",
+      "evidence": "TWITTER_PLAYER",
+      "kind": "WEB",
+      "playUrl": "@page",
+      "title": "Story with a Twitter card player"
+    },
+    {
+      "path": "pages/jsonld-videoobject.html",
+      "note": "",
+      "status": "VIDEO",
+      "evidence": "SCHEMA_VIDEO_OBJECT",
+      "kind": "MP4",
+      "playUrl": "media/clip.mp4",
+      "durationSeconds": 6,
+      "title": "Schema video name"
+    },
+    {
+      "path": "pages/jsonld-news-graph.html",
+      "note": "",
+      "status": "VIDEO",
+      "evidence": "SCHEMA_VIDEO_OBJECT",
+      "kind": "WEB",
+      "playUrl": "media/clip.webm",
+      "durationSeconds": 6,
+      "title": "Video in the graph"
+    },
+    {
+      "path": "pages/youtube-iframe.html",
+      "note": "The embed becomes the canonical watch URL, the verified playback path.",
+      "status": "VIDEO",
+      "evidence": "KNOWN_PROVIDER_IFRAME",
+      "kind": "YOUTUBE",
+      "playUrl": "https://www.youtube.com/watch?v=-7CC1mFWTKI",
+      "title": "Story with a YouTube embed"
+    },
+    {
+      "path": "pages/youtube-lazy-iframe.html",
+      "note": "Shape of brave.com/podcast/e121: the embed is only in data-src.",
+      "status": "VIDEO",
+      "evidence": "KNOWN_PROVIDER_IFRAME",
+      "kind": "YOUTUBE",
+      "playUrl": "https://www.youtube.com/watch?v=-7CC1mFWTKI"
+    },
+    {
+      "path": "pages/youtube-playlist-embed.html",
+      "note": "A playlist embed is not one video.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/vimeo-iframe.html",
+      "note": "Non-YouTube players are driven through the article, as PBS was.",
+      "status": "VIDEO",
+      "evidence": "KNOWN_PROVIDER_IFRAME",
+      "kind": "WEB",
+      "playUrl": "@page"
+    },
+    {
+      "path": "pages/ted-embed.html",
+      "note": "",
+      "status": "VIDEO",
+      "evidence": "KNOWN_PROVIDER_IFRAME",
+      "kind": "TED",
+      "playUrl": "https://www.ted.com/talks/matt_walker_sleep_is_your_superpower"
+    },
+    {
+      "path": "pages/video-tag-src.html",
+      "note": "",
+      "status": "VIDEO",
+      "evidence": "VIDEO_TAG",
+      "kind": "MP4",
+      "playUrl": "media/clip.mp4"
+    },
+    {
+      "path": "pages/video-tag-sources.html",
+      "note": "MP4 is preferred.",
+      "status": "VIDEO",
+      "evidence": "VIDEO_TAG",
+      "kind": "MP4",
+      "playUrl": "media/clip.mp4"
+    },
+    {
+      "path": "pages/video-hero-loop.html",
+      "note": "A silent looping clip with no controls is decoration.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/video-js-built.html",
+      "note": "Known limit of a static scan: video created by script is not seen.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/oembed-generic.html",
+      "note": "WordPress adds this to every post; it is not evidence of video.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/markup-in-comments-and-scripts.html",
+      "note": "",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/audio-music-page.html",
+      "note": "Shape of a SoundCloud track page: an audio widget advertised as a video player.",
+      "status": "NO_VIDEO"
+    },
+    {
+      "path": "pages/paywalled-video.html",
+      "note": "The scan reports video; playback would stop at the wall. Only a real load can know.",
+      "status": "VIDEO",
+      "evidence": "OG_TYPE_VIDEO",
+      "kind": "WEB",
+      "playUrl": "@page"
+    },
+    {
+      "path": "pages/empty-player-shell.html",
+      "note": "A player waiting for script to give it a source: weak evidence.",
+      "status": "VIDEO",
+      "evidence": "VIDEO_TAG",
+      "kind": "WEB",
+      "playUrl": "@page"
+    }
+  ]
+}
