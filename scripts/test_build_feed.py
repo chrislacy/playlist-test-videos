@@ -31,6 +31,22 @@ class ArticleLinkTest(unittest.TestCase):
         entry = {"link": "http://news.example/a?utm_medium=x", "description": ""}
         self.assertEqual("https://news.example/a", build_feed.article_link(entry, {"url": "https://x/"}))
 
+    def test_youtube_shorts_are_skipped(self):
+        source = {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=x"}
+        short = {"link": "https://www.youtube.com/shorts/abcdefghijk", "description": ""}
+        watch = {"link": "https://www.youtube.com/watch?v=abcdefghijk", "description": ""}
+        self.assertIsNone(build_feed.article_link(short, source))
+        self.assertEqual(watch["link"], build_feed.article_link(watch, source))
+
+    def test_atom_entries_are_read(self):
+        atom = ('<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Clip</title>'
+                '<link rel="alternate" href="https://www.youtube.com/watch?v=abcdefghijk"/>'
+                '<published>2026-10-19T21:52:27+00:00</published></entry></feed>')
+        (entry,) = build_feed.parse_entries(atom)
+        self.assertEqual("https://www.youtube.com/watch?v=abcdefghijk", entry["link"])
+        self.assertEqual("Clip", entry["title"])
+        self.assertEqual(21, entry["published"].hour)
+
     def test_credentials_in_a_url_drop_the_article(self):
         for url in ("https://news.example/a?accessToken=abc", "https://news.example/a?sig=1"):
             self.assertIsNone(build_feed.clean_article_url(url))

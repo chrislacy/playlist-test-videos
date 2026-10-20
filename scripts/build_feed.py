@@ -156,7 +156,12 @@ def article_link(entry, source):
         link = next((h for h in anchors.hrefs
                      if mediascan.host_of(h) not in own_hosts
                      and urlsplit(h).path not in ("", "/")), None)
-    return clean_article_url(link) if link else None
+    if not link:
+        return None
+    # Shorts are vertical clips of a minute or less, which look poor on a TV.
+    if mediascan.host_of(link) == "youtube.com" and urlsplit(link).path.startswith("/shorts/"):
+        return None
+    return clean_article_url(link)
 
 
 def inspect(url, timeout):
@@ -254,7 +259,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--sources", default=os.path.join(ROOT, "feed-sources.json"))
     parser.add_argument("--out", default=os.path.join(ROOT, "feed.xml"))
-    parser.add_argument("--max-items", type=int, default=50)
+    parser.add_argument("--max-items", type=int, help="default: maxItems in the sources file, else 50")
     parser.add_argument("--max-age-days", type=int, default=30)
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--timeout", type=float, default=15)
@@ -277,6 +282,8 @@ def main():
             continue
         linked = 0
         for entry in entries:
+            if linked >= source.get("maxEntries", len(entries)):
+                break
             article = article_link(entry, source)
             if article and article not in kept and article not in jobs:
                 jobs[article] = (entry, source)
@@ -299,7 +306,8 @@ def main():
                 print(f"VIDEO        {url}  {info['evidence']} {info['kind']}")
                 kept[url] = build_item(entry, source, url, info)
 
-    items = sorted(kept.values(), key=lambda i: i["published"], reverse=True)[:args.max_items]
+    max_items = args.max_items or config.get("maxItems", 50)
+    items = sorted(kept.values(), key=lambda i: i["published"], reverse=True)[:max_items]
     print(f"{found} new with video; {len(items)} in the feed")
     if not args.dry_run:
         write_feed(args.out, config, items)

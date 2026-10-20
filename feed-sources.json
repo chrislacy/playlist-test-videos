@@ -3,6 +3,7 @@
   "description": "Articles from tech news feeds whose pages hold a video, for trying the Playlist TV app. Built by scripts/build_feed.py.",
   "link": "https://chrislacy.github.io/playlist-test-videos/",
   "feedUrl": "https://chrislacy.github.io/playlist-test-videos/feed.xml",
+  "maxItems": 18,
   "sources": [
     {
       "name": "Techmeme",
@@ -20,6 +21,36 @@
     {
       "name": "Ars Technica",
       "url": "https://feeds.arstechnica.com/arstechnica/index"
+    },
+    {
+      "name": "The Verge (YouTube)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ",
+      "maxEntries": 4
+    },
+    {
+      "name": "Marques Brownlee",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ",
+      "maxEntries": 4
+    },
+    {
+      "name": "WIRED (YouTube)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCftwRNsjfRo08xYE31tkiyw",
+      "maxEntries": 4
+    },
+    {
+      "name": "TechCrunch (YouTube)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCjyq_K1Xwfg8Lndy7lKMpA",
+      "maxEntries": 4
+    },
+    {
+      "name": "Engadget (YouTube)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-6OW5aJYBFM33zXQlBKPNA",
+      "maxEntries": 4
+    },
+    {
+      "name": "Linus Tech Tips",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw",
+      "maxEntries": 4
     }
   ]
 }
