@@ -32,6 +32,9 @@ USER_AGENT = "playlist-test-videos-feed-builder (+https://github.com/chrislacy/p
 MAX_BODY_BYTES = 1 << 20
 MEDIA_NS = "http://search.yahoo.com/mrss/"
 ATOM_NS = "http://www.w3.org/2005/Atom"
+# A bare <video> tag or an oEmbed link may be a player shell or decoration, and such pages
+# are often behind a wall; only specific evidence is listed.
+WEAK_EVIDENCE = ("VIDEO_TAG", "OEMBED_PROVIDER")
 MEDIA_TYPES = {".mp4": "video/mp4", ".m4v": "video/mp4", ".webm": "video/webm",
                ".m3u8": "application/vnd.apple.mpegurl"}
 
@@ -187,6 +190,7 @@ def read_feed(path):
         source = item.find("source")
         enclosure = item.find("enclosure")
         thumbnail = item.find(f"{{{MEDIA_NS}}}thumbnail")
+        content = item.find(f"{{{MEDIA_NS}}}content")
         items.append({
             "title": child_text(item, "title") or "",
             "link": child_text(item, "link"),
@@ -197,6 +201,7 @@ def read_feed(path):
             "enclosure": (enclosure.get("url"), enclosure.get("type"))
             if enclosure is not None else None,
             "thumbnail": thumbnail.get("url") if thumbnail is not None else None,
+            "duration": int(content.get("duration", 0)) if content is not None else 0,
         })
     return [i for i in items if i["link"]]
 
@@ -217,6 +222,7 @@ def build_item(entry, source, article, info):
         "evidence": info["evidence"],
         "enclosure": enclosure,
         "thumbnail": info["thumbnail"],
+        "duration": info["durationSeconds"],
     }
 
 
@@ -249,6 +255,9 @@ def write_feed(path, config, items):
                 "url": item["enclosure"][0], "type": item["enclosure"][1], "length": "0"})
         if item["thumbnail"]:
             ET.SubElement(element, f"{{{MEDIA_NS}}}thumbnail", {"url": item["thumbnail"]})
+        if item["duration"]:
+            ET.SubElement(element, f"{{{MEDIA_NS}}}content", {
+                "url": item["link"], "medium": "video", "duration": str(item["duration"])})
     ET.indent(rss)
     temporary = path + ".tmp"
     ET.ElementTree(rss).write(temporary, encoding="utf-8", xml_declaration=True)
@@ -270,7 +279,8 @@ def main():
         config = json.load(f)
     now = datetime.datetime.now(datetime.timezone.utc)
     cutoff = now - datetime.timedelta(days=args.max_age_days)
-    kept = {i["link"]: i for i in read_feed(args.out) if i["published"] and i["published"] >= cutoff}
+    kept = {i["link"]: i for i in read_feed(args.out)
+            if i["published"] and i["published"] >= cutoff and i["evidence"] not in WEAK_EVIDENCE}
 
     jobs = {}
     for source in config["sources"]:
@@ -301,6 +311,8 @@ def main():
                 print(f"unreachable  {url}  ({reason})")
             elif info["status"] != "VIDEO":
                 print(f"no video     {url}")
+            elif info["evidence"] in WEAK_EVIDENCE:
+                print(f"weak         {url}  {info['evidence']}")
             else:
                 found += 1
                 print(f"VIDEO        {url}  {info['evidence']} {info['kind']}")

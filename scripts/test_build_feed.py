@@ -63,7 +63,7 @@ class FeedFileTest(unittest.TestCase):
             "published": datetime.datetime(2026, 10, 20, 6, 0, tzinfo=datetime.timezone.utc),
             "source_name": "Techmeme", "source_url": "https://www.techmeme.com/feed.xml",
             "evidence": "OG_VIDEO", "enclosure": ("https://news.example/c.mp4", "video/mp4"),
-            "thumbnail": "https://news.example/t.jpg",
+            "thumbnail": "https://news.example/t.jpg", "duration": 2471,
         }
         config = {"title": "T", "link": "https://x/", "description": "D", "feedUrl": "https://x/feed.xml"}
         with tempfile.TemporaryDirectory() as directory:

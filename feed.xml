@@ -5,17 +5,8 @@
     <link>https://chrislacy.github.io/playlist-test-videos/</link>
     <description>Articles from tech news feeds whose pages hold a video, for trying the Playlist TV app. Built by scripts/build_feed.py.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2026 23:45:01 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 23:05:01 -0400</lastBuildDate>
     <atom:link href="https://chrislacy.github.io/playlist-test-videos/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>An Australian minister says the eSafety Commissioner plans to sue Meta, TikTok, Snapchat, and YouTube over alleged breaches of the under-16 social media ban (Angus Whitley/Bloomberg)</title>
-      <link>https://www.bloomberg.com/news/articles/2026-10-20/australia-to-sue-facebook-tiktok-for-alleged-breaches-of-ban</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-10-20/australia-to-sue-facebook-tiktok-for-alleged-breaches-of-ban</guid>
-      <pubDate>Mon, 19 Oct 2026 23:45:01 -0400</pubDate>
-      <source url="https://www.techmeme.com/feed.xml">Techmeme</source>
-      <category>VIDEO_TAG</category>
-      <media:thumbnail url="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJoDdi.cLqq8/v3/620x-1.jpg" />
-    </item>
     <item>
       <title>Mercury CEO Immad Akhund says the fintech hit $1B in annualized revenue, up ~50% YoY, has more than 450K customers, and is launching a payroll service (Eric Newcomer/Newcomer)</title>
       <link>https://www.newcomer.co/p/mercury-crosses-1-billion-annualized</link>
@@ -33,6 +24,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCCjyq_K1Xwfg8Lndy7lKMpA">TechCrunch (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/4FZTk2J4tc0/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=4FZTk2J4tc0" medium="video" duration="1711" />
     </item>
     <item>
       <title>So You’ve Got a Hit Product. How Does Your Company Do It Again? | Disrupt 2026</title>
@@ -42,6 +34,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCCjyq_K1Xwfg8Lndy7lKMpA">TechCrunch (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/n073LFOjcwM/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=n073LFOjcwM" medium="video" duration="2471" />
     </item>
     <item>
       <title>Can You Still Build a Breakout Company Without AI? Investors and a Founder Weigh In | Disrupt 2026</title>
@@ -51,6 +44,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCCjyq_K1Xwfg8Lndy7lKMpA">TechCrunch (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/quvtCdQQsDQ/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=quvtCdQQsDQ" medium="video" duration="2265" />
     </item>
     <item>
       <title>The Real Tokenmaxxing: Navigating a Multi-Model World | Disrupt 2026</title>
@@ -60,6 +54,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCCjyq_K1Xwfg8Lndy7lKMpA">TechCrunch (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/niojbz9fbOY/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=niojbz9fbOY" medium="video" duration="2415" />
     </item>
     <item>
       <title>Why your favorite creator is building an app | The Vergecast</title>
@@ -69,6 +64,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ">The Verge (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/CBVODIUnPwc/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=CBVODIUnPwc" medium="video" duration="2487" />
     </item>
     <item>
       <title>This video was pain and suffering</title>
@@ -78,6 +74,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw">Linus Tech Tips</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/U-QiUAMda7Y/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=U-QiUAMda7Y" medium="video" duration="1429" />
     </item>
     <item>
       <title>JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes</title>
@@ -96,15 +93,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UC-6OW5aJYBFM33zXQlBKPNA">Engadget (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/HjXcjBeWwuo/maxresdefault.jpg" />
-    </item>
-    <item>
-      <title>No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market</title>
-      <link>https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/</guid>
-      <pubDate>Sun, 18 Oct 2026 21:00:00 +0000</pubDate>
-      <source url="https://techcrunch.com/feed/">TechCrunch</source>
-      <category>KNOWN_PROVIDER_IFRAME</category>
-      <media:thumbnail url="https://techcrunch.com/wp-content/uploads/2026/10/Benchmark2.jpg?w=799" />
+      <media:content url="https://www.youtube.com/watch?v=HjXcjBeWwuo" medium="video" duration="180" />
     </item>
     <item>
       <title>The NEW Tesla Roadster: My Honest Reaction</title>
@@ -114,6 +103,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ">Marques Brownlee</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/scwlR0QHGOk/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=scwlR0QHGOk" medium="video" duration="1365" />
     </item>
     <item>
       <title>You’re Going To Need 250k Just To Reserve The Tesla Roadster</title>
@@ -123,6 +113,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UC-6OW5aJYBFM33zXQlBKPNA">Engadget (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/cuOImCYp-4k/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=cuOImCYp-4k" medium="video" duration="120" />
     </item>
     <item>
       <title>Historian Fact Checks Gilded Age Slop</title>
@@ -132,6 +123,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCftwRNsjfRo08xYE31tkiyw">WIRED (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/OxxOEUHfzw4/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=OxxOEUHfzw4" medium="video" duration="1822" />
     </item>
     <item>
       <title>Apple's HomeView has an app problem | The Vergecast</title>
@@ -141,6 +133,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ">The Verge (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/z00Lhm3CqAM/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=z00Lhm3CqAM" medium="video" duration="5912" />
     </item>
     <item>
       <title>Improve your Apple CarPlay experience by doing these simple things</title>
@@ -150,6 +143,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UC-6OW5aJYBFM33zXQlBKPNA">Engadget (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/HmIrkre4PQI/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=HmIrkre4PQI" medium="video" duration="151" />
     </item>
     <item>
       <title>NVIDIA Tried to Tell me How to Benchmark RTX Spark</title>
@@ -159,6 +153,7 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw">Linus Tech Tips</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/aV81SqB6HQg/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=aV81SqB6HQg" medium="video" duration="820" />
     </item>
     <item>
       <title>Everything's recording everybody. What now? | The Vergecast</title>
@@ -168,6 +163,27 @@
       <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ">The Verge (YouTube)</source>
       <category>OG_VIDEO</category>
       <media:thumbnail url="https://i.ytimg.com/vi/PUcWwvltFcc/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=PUcWwvltFcc" medium="video" duration="2318" />
+    </item>
+    <item>
+      <title>Stop replacing the batteries in your Xbox controller – do this instead</title>
+      <link>https://www.youtube.com/watch?v=jjFQiwnkPls</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=jjFQiwnkPls</guid>
+      <pubDate>Thu, 15 Oct 2026 14:00:03 +0000</pubDate>
+      <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UC-6OW5aJYBFM33zXQlBKPNA">Engadget (YouTube)</source>
+      <category>OG_VIDEO</category>
+      <media:thumbnail url="https://i.ytimg.com/vi/jjFQiwnkPls/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=jjFQiwnkPls" medium="video" duration="129" />
+    </item>
+    <item>
+      <title>My First 15 Minutes with RTX Spark</title>
+      <link>https://www.youtube.com/watch?v=sjuisARFWn8</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=sjuisARFWn8</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:14 +0000</pubDate>
+      <source url="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw">Linus Tech Tips</source>
+      <category>OG_VIDEO</category>
+      <media:thumbnail url="https://i.ytimg.com/vi/sjuisARFWn8/maxresdefault.jpg" />
+      <media:content url="https://www.youtube.com/watch?v=sjuisARFWn8" medium="video" duration="876" />
     </item>
   </channel>
 </rss>
