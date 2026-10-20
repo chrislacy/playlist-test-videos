@@ -11,7 +11,23 @@ Small, synthetic pages and videos for testing whether a web page holds a playabl
 
 Pages use relative URLs, so the repository works under any base path, including a GitHub Pages project site.
 
+## News feed
+
+`feed.xml` is an RSS feed of real, current articles whose pages hold a video, for trying the Playlist TV app against live content. `scripts/build_feed.py` builds it: it reads the RSS or Atom feeds listed in `feed-sources.json` (Techmeme, The Verge, TechCrunch, Ars Technica), follows each entry to its article, scans the article's HTML for video, and keeps the ones that have one.
+
+    scripts/build_feed.py            # update feed.xml
+    scripts/build_feed.py --dry-run  # show what each article scored; write nothing
+
+- The feed holds titles and links only, never article text. Each item carries the evidence found (`category`), the article's image (`media:thumbnail`), and the video file (`enclosure`) when the page names one.
+- Techmeme's own `<link>` is a Techmeme page, so that source sets `"linkFrom": "description"` to take the article from the entry's description.
+- Links are made HTTPS and lose tracking parameters. An article whose URL carries a credential (a gifted-article token) is skipped, because the feed is public.
+- Each run adds new finds to the ones already in `feed.xml`, drops items older than `--max-age-days` (30), and keeps at most `--max-items` (50). Few articles hold a video, so the feed fills over several runs.
+- The scan follows the app's scanner (`scripts/mediascan.py`), but the app probes each article again when it plays, and its answer is the one that counts. News sites that block non-browser clients, or put the video behind a login, are not listed.
+- Add a source by adding an entry to `feed-sources.json`.
+
 ## Checks
+
+The scripts' own tests need no network and no device: `cd scripts && python3 -m unittest discover -p 'test_*.py'`. `test_mediascan.py` runs the scan over the fixture pages and compares the answers with `expected.json`.
 
 Offline, against the real scanner in Brave Core (no device, no network):
 

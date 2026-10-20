@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Playlist TV test feed</title>
+    <link>https://chrislacy.github.io/playlist-test-videos/</link>
+    <description>Articles from tech news feeds whose pages hold a video, for trying the Playlist TV app. Built by scripts/build_feed.py.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Oct 2026 23:05:01 -0400</lastBuildDate>
+    <atom:link href="https://chrislacy.github.io/playlist-test-videos/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mercury CEO Immad Akhund says the fintech hit $1B in annualized revenue, up ~50% YoY, has more than 450K customers, and is launching a payroll service (Eric Newcomer/Newcomer)</title>
+      <link>https://www.newcomer.co/p/mercury-crosses-1-billion-annualized</link>
+      <guid isPermaLink="true">https://www.newcomer.co/p/mercury-crosses-1-billion-annualized</guid>
+      <pubDate>Mon, 19 Oct 2026 23:05:01 -0400</pubDate>
+      <source url="https://www.techmeme.com/feed.xml">Techmeme</source>
+      <category>KNOWN_PROVIDER_IFRAME</category>
+      <media:thumbnail url="https://substackcdn.com/image/youtube/w_728,c_limit/6iGPvSUsYmI" />
+    </item>
+    <item>
+      <title>JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes</title>
+      <link>https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws</link>
+      <guid isPermaLink="true">https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws</guid>
+      <pubDate>Mon, 19 Oct 2026 10:30:00 -0400</pubDate>
+      <source url="https://www.theverge.com/rss/index.xml">The Verge</source>
+      <category>SCHEMA_VIDEO_OBJECT</category>
+      <media:thumbnail url="https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/gov-jb-pritzker.jpg?quality=90&amp;strip=all&amp;crop=7.8125,0,84.375,100" />
+    </item>
+    <item>
+      <title>No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market</title>
+      <link>https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/</guid>
+      <pubDate>Sun, 18 Oct 2026 21:00:00 +0000</pubDate>
+      <source url="https://techcrunch.com/feed/">TechCrunch</source>
+      <category>KNOWN_PROVIDER_IFRAME</category>
+      <media:thumbnail url="https://techcrunch.com/wp-content/uploads/2026/10/Benchmark2.jpg?w=799" />
+    </item>
+  </channel>
+</rss>

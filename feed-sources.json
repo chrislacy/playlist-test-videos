@@ -1,0 +1,25 @@
+{
+  "title": "Playlist TV test feed",
+  "description": "Articles from tech news feeds whose pages hold a video, for trying the Playlist TV app. Built by scripts/build_feed.py.",
+  "link": "https://chrislacy.github.io/playlist-test-videos/",
+  "feedUrl": "https://chrislacy.github.io/playlist-test-videos/feed.xml",
+  "sources": [
+    {
+      "name": "Techmeme",
+      "url": "https://www.techmeme.com/feed.xml",
+      "linkFrom": "description"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index"
+    }
+  ]
+}
